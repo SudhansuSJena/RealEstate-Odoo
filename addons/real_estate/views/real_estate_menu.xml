@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--MAIN MENU: RealEstate-->
+    <menuitem
+        id="real_estate_menu"
+        name="RealEstate"
+        sequence='1'
+    />
+
+    <!--RealEstate sub-menu1: RealEstate Property-->
+    <menuitem
+        id="real_estate_property_all_menu"
+        name="RealEstate Property"
+        parent="real_estate_menu"
+        sequence="1"
+     />
+
+    <!--RealEstate Property sub-menu1: Property-->
+    <menuitem
+        id="real_estate_property_menu"
+        name="Property"
+        parent="real_estate_property_all_menu"
+        sequence="1"
+        action="action_real_estate_property_window"
+     />
+
+    <!--RealEstate Property submenu2: Property types -->
+    <menuitem
+        id="real_estate_property_types_menu"
+        name="Property Types"
+        parent="real_estate_property_all_menu"
+        sequence="2"
+        action="action_real_estate_property_types_window"
+    />
+
+    <!--RealEstate Property submenu2: Property types -->
+    <menuitem
+        id="real_estate_amenities_menu"
+        name="Amenities"
+        parent="real_estate_property_all_menu"
+        sequence="3"
+        action="action_real_estate_amenities_window"
+    />
+
+</odoo>

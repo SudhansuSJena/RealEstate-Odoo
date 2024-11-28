@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_real_estate_property_form" model="ir.ui.view">
+        <field 
+        name="name">real_estate.property.form</field>
+        <field name="model">real_estate.property</field>
+        <field name="arch" type="xml">
+            <form string="Property Form">
+                <sheet>
+                    <group id="form_group1">
+                        <field name="name" />
+                        <field name="typeOfProperty" />
+                        <field name="status" />
+                    </group>
+                    <group id="form_group2">
+                        <field name="area" />
+                        <field name="geo_location" />
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" groups="base.group_user" />
+                    <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="view_real_estate_property_tree" model="ir.ui.view">
+        <field name="name">real_estate.property.tree</field>
+        <field name="model">real_estate.property</field>
+        <field name="arch" type="xml">
+            <tree string="Property Tree">
+                <field name="name" />
+                <field name="typeOfProperty" />
+                <field name="status" />
+                <field name="area" />
+                <field name="geo_location" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_real_estate_property_kanban" model="ir.ui.view">
+        <field name="name">real_estate.property.kanban</field>
+        <field name="model">real_estate.property</field>
+        <field name="arch" type="xml">
+        <kanban string="RealEstate Property Kanban">
+            <templates>
+                <t t-name="kanban-box">
+                    <div class="oe_kanban_global_click">
+                        <div class="oe_kanban_details">
+                            <div class="oe_kanban_title">
+                                <field name="name" />
+                            </div>
+                            <div class="oe_kanban_tags">
+                                <field name="typeOfProperty" />
+                            </div>
+                            <div class="oe_kanban_tags">
+                                <field name="status" />
+                            </div>
+                            <div class="oe_kanban_tags">
+                                <field name="area" />
+                            </div>
+                            <div class="oe_kanban_tags">
+                                <field name="geo_location" />
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </templates>
+        </kanban>
+        </field>
+
+    </record>
+
+
+    <record id="action_real_estate_property_window" model="ir.actions.act_window">
+        <field name="name">RealEstate Property</field>
+        <field name="res_model">real_estate.property</field>
+        <field name="view_mode">kanban,tree,form</field>
+
+        <field name="view_ids" eval="[
+        Command.clear(), 
+        (0, 0, {'view_mode': 'kanban', 'view_id': ref('view_real_estate_property_kanban')}),
+        (0, 0, {'view_mode': 'tree', 'view_id': ref('view_real_estate_property_tree')}), 
+        (0, 0, {'view_mode': 'form', 'view_id': ref('view_real_estate_property_form')})]" />
+    </record>
+</odoo>
