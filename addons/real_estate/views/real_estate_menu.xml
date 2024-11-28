@@ -42,4 +42,13 @@
         action="action_real_estate_amenities_window"
     />
 
+    <!--RealEstate Property submenu3: Property types-->
+    <menuitem
+        id="real_estate_features_menu"
+        name="Features"
+        parent="real_estate_property_all_menu"
+        sequence='4'
+        action="action_real_estate_features_window"
+    />
+
 </odoo>
