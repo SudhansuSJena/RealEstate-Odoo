@@ -17,6 +17,15 @@
                         <field name="area" />
                         <field name="geo_location" />
                     </group>
+
+                    <group>
+                        <field name="amenity" widget="many2many_tags"/>
+
+                        <field name="feature" widget="many2many_tags" />
+
+                        <field name="connectivity" widget="many2many_tags" />
+                    </group>
+
                 </sheet>
                 <div class="oe_chatter">
                     <field name="message_follower_ids" groups="base.group_user" />
@@ -36,6 +45,14 @@
                 <field name="typeOfProperty" />
                 <field name="status" />
                 <field name="area" />
+                <!--many2many_tags widget used-->
+                <field name="amenity" widget="many2many_tags"/>
+ 
+                <!--many2many_tags widget used-->
+                <field name="feature" widget="many2many_tags" />
+
+                <field name="connectivity" widget="many2many_tags" />
+
                 <field name="geo_location" />
             </tree>
         </field>
@@ -64,6 +81,18 @@
                             </div>
                             <div class="oe_kanban_tags">
                                 <field name="geo_location" />
+                            </div>
+                            <!--many2many_tags widget used-->
+                            <div class="oe_kanban_tags">
+                                <field name="amenity" widget="many2many_tags"/>
+                            </div>
+
+                            <div class="oe_kanban_tags">
+                                <field name="feature" widget="many2many_tags"/>
+                            </div>
+
+                            <div class="oe_kanban_tags">
+                                <field name="connectivity" widget="many2many_tags"/>
                             </div>
                         </div>
                     </div>

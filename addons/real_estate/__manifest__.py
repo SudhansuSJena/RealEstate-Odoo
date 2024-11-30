@@ -9,6 +9,7 @@
   ],
   "data": [
       "security/ir.model.access.csv",
+      "views/real_estate_connectivity_views.xml",
       "views/real_estate_features_views.xml",
       "views/real_estate_amenities.xml",
       "views/real_estate_property_types_views.xml",
