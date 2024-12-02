@@ -7,5 +7,5 @@ class RealEstateFeatures(models.Model):
     _inherit = ["mail.thread"]
 
 
-    feature_name = fields.Char(string="Feature Name")
-    description = fields.Char(string="Description")
+    feature_name = fields.Char(string="Feature Name", tracking=True)
+    description = fields.Char(string="Description", tracking=True)

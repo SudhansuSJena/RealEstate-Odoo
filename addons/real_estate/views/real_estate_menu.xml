@@ -13,7 +13,12 @@
         name="RealEstate Property"
         parent="real_estate_menu"
         sequence="1"
-     />
+    />
+
+    <menuitem
+        id="model_name_menu"
+        name="name"
+        sequence="10"/>
 
     <!--RealEstate Property sub-menu1: Property-->
     <menuitem
@@ -58,6 +63,15 @@
         parent="real_estate_property_all_menu"
         sequence='5'
         action="action_real_estate_connectivity_window"
+    />
+
+    <!--RealEstate Property submenu5: Property details-->
+    <menuitem
+        id="real_estate_property_details_menu"
+        name="Property Details"
+        parent="real_estate_property_all_menu"
+        sequence="6"
+        action="action_real_estate_property_details_window"
     />
 
 </odoo>

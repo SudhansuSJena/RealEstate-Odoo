@@ -57,11 +57,11 @@
         <field name="name">RealEstate Property Types</field>
         <field name="res_model">real_estate.property_types</field>
         <field name="view_mode">kanban,tree,form</field>
-        <field name="view_ids" eval="[(5, 0, 0), 
+        <field name="view_ids" eval="[
+            Command.clear(), 
             (0, 0, {'view_mode': 'kanban', 'view_id': ref('view_real_estate_property_types_kanban')}), 
             (0, 0, {'view_mode': 'tree', 'view_id': ref('view_real_estate_property_types_tree')}), 
             (0, 0, {'view_mode': 'form', 'view_id': ref('view_real_estate_property_types_form')})
         ]"/>
     </record>
-
 </odoo>

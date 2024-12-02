@@ -10,7 +10,7 @@ class RealEstateProperty(models.Model):
     typeOfProperty = fields.Many2one(
         comodel_name = "real_estate.property_types",
         string="Type of Property",
-        on_delete='cascade',
+        ondelete='cascade',
         domain=[],
         required=True,
         help='Select the type of property',
@@ -32,7 +32,8 @@ class RealEstateProperty(models.Model):
         column2 = 'amenities_id',
         string = 'Property Amenities',
         domain = [],
-        help = 'Select Amenities for Property'
+        help = 'Select Amenities for Property',
+        tracking=True
     )
 
     feature = fields.Many2many(
@@ -42,7 +43,8 @@ class RealEstateProperty(models.Model):
         column2 = 'features_id',
         string = 'Property Features',
         domain = [],
-        help = 'Select Features for Property'
+        help = 'Select Features for Property',
+        tracking=True
     )
 
     connectivity = fields.Many2many(
@@ -52,8 +54,48 @@ class RealEstateProperty(models.Model):
         column2 = 'connectivity_id',
         string = 'Property Connectivity',
         domain = [],
-        help = 'See the connectivities from the property.'
+        help = 'See the connectivities from the property.',
+        tracking=True
     )
+
+    property_details_id = fields.Many2one(
+        comodel_name = "real_estate.property_details",
+        string="Property Details",
+        domain=[],
+        help='Select your property details',
+        tracking=True
+    )
+
+    booking_ids = fields.One2many(
+        comodel_name="real_estate.bookings",
+        inverse_name="property_id",
+        string="Booking",
+        domain=[],
+        context={},
+        readonly=False,
+        help='Booking IDs of Property'
+    )
+
+    rent_contract_ids = fields.One2many(
+        comodel_name="real_estate.rent_contracts",
+        inverse_name="property_id",
+        string="Rental Contracts",
+        domain=[],
+        context={},
+        required=True,
+        help="Property's Rental Contracts"
+    )
+
+    sale_contract_ids = fields.One2many(
+        comodel_name="real_estate.sale_contracts",
+        inverse_name="property_id",
+        string="Sale Contracts",
+        domain=[],
+        context={},
+        required=True,
+        help="Property's Sale Contracts"
+    )
+
 
     
     

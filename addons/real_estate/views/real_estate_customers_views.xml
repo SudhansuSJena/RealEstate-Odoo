@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!--Custom tree-->
+<record id="view_real_estate_customers_tree" model="ir.ui.view">
+    <field name="name">real_estate.customers.tree</field>
+    <field name="model">real_estate.customers</field>
+    <field name="arch" type="xml">
+        <tree string="Customer's Tree view">
+            <field name="customer_name" />
+            <field name="customer_phone_number" />
+            <field name="customer_email" />
+            <field name="booking_ids" />
+            <field name="rental_contract_ids" />
+            <field name="sale_contract_ids" />
+        </tree>
+    </field>
+
+</record>
+
+<!--Custom kanban-->
+<record id="view_real_estate_customers_kanban" model="ir.ui.view">
+    <field name="name">real_estate.customers.kanban</field>
+    <field name="model">real_estate.customers</field>
+    <field name="arch" type="xml">
+        <kanban string="Customer's Kanban View">
+            <templates>
+            <t t-name="kanban-box">
+            <div class="oe_kanban_global_click">
+                <div class="oe_kanban_details">
+                    <div class="oe_kanban_tags">
+                        <field name="customer_name" />
+                    </div>
+                    <div class="oe_kanban_tags">
+                        <field name="customer_phone_number" />
+                    </div>
+                    <div class="oe_kanban_tags">
+                        <field name="customer_email" />
+                    </div>
+                    <div class="oe_kanban_tags">
+                        <field name="booking_ids" />
+                    </div>
+                    <div class="oe_kanban_tags">
+                        <field name="rental_contract_ids" />
+                    </div>
+                    <div class="oe_kanban_tags">
+                        <field name="sale_contract_ids" />
+                    </div>
+                </div>
+            </div>
+            </t>
+            </templates>
+        </kanban>
+    
+    </field>
+</record>
+
+<!--Custom form-->
+<record id="view_real_estate_customers_form" model="ir.ui.view">
+    <field name="name">real_estate.customers.form</field>
+    <field name="model">real_estate.customers</field>
+    <field name="arch" type="xml">
+        <form string="Customer's Form View">
+            <sheet>
+                <group id="customer_detail">
+                    <field name="customer_name" />
+                    <field name="customer_phone_number" />
+                    <field name="customer_email" />
+                </group>
+
+                <group id="customer_sales">
+                    <field name="booking_ids" />
+                    <field name="rental_contract_ids" />
+                    <field name="sale_contract_ids" />
+                </group>
+
+            </sheet>
+            <div class="oe_chatter">
+                <field name="message_follower_ids" groups="base.group_user" />
+                <field name="message_ids" />
+            </div>
+        </form>
+    </field>
+</record>
+
+<!--Custom Action-->
+<record id="action_real_estate_customers_window" model="ir.actions.act_window">
+    <field name="name">Customers</field>
+    <field name="res_model">real_estate.customers</field>
+    <field name="view_mode">tree,kanban,form</field>
+    <field name="view_ids" eval="[
+        Command.clear(),
+        (0, 0, {'view_mode': 'tree', 'view_id': ref('view_real_estate_customers_tree')}),
+        (0, 0, {'view_mode': 'kanban', 'view_id': ref('view_real_estate_customers_kanban')}),
+        (0, 0, {'view_mode': 'form', 'view_id': ref('view_real_estate_customers_form')})
+    ]" />
+
+</record>
+</odoo>
