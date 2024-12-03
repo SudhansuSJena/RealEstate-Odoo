@@ -6,7 +6,7 @@ class RealEstateRentContracts(models.Model):
     _description = "Property Rental Contracts"
     _inherit = ['mail.thread']
 
-
+    name = fields.Char(string="Customer's contract Name")
     property_id = fields.Many2one(
         comodel_name="real_estate.property",
         string="Property",
@@ -20,7 +20,7 @@ class RealEstateRentContracts(models.Model):
         ('active', 'Active'),
         ('expired', 'Expired'),
         ('terminated', 'Terminated')
-    ], tracking=True)
+    ], string="Rent's status", tracking=True)
     currency_id = fields.Many2one(
         comodel_name="res.currency",
         string="Currency",

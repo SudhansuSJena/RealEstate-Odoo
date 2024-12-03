@@ -7,14 +7,14 @@ class RealEstateAmenities(models.Model):
     _inherit=["mail.thread"]
 
     
-    amenity_name = fields.Char(string="Amenity Name", tracking=True)
+    name = fields.Char(string="Amenity Name", tracking=True)
     description=fields.Char(string="Description", tracking=True)
-    amenity_id = fields.Many2many(
-        comodel_name = "real_estate.property",
-        relation = "property_amenity_rel",
-        column1 = "property_id",
-        column2 = "amenity_id",
-        string = "Amenity",
-        domain = [],
-        help = 'Choose Amenity'
-    )
+    # amenity_id = fields.Many2many(
+    #     comodel_name = "real_estate.property",
+    #     relation = "property_amenity_rel",
+    #     column1 = "property_id",
+    #     column2 = "amenity_id",
+    #     string = "Amenity",
+    #     domain = [],
+    #     help = 'Choose Amenity'
+    # )

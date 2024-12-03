@@ -9,7 +9,7 @@ class RealEstateBookings(models.Model):
 
     customer_id = fields.Many2one(
         comodel_name="real_estate.customers",
-        string="Select Customer",
+        string="Customer",
         ondelete="cascade",
         domain=[],
         help='Select customers',
@@ -30,12 +30,15 @@ class RealEstateBookings(models.Model):
         ('pending', 'Pending'), 
         ('confirmed', 'Confirmed'), 
         ('cancelled', 'Cancelled')
-        ], tracking=True)
+        ], string="Booking status", tracking=True)
     currency_id = fields.Many2one(
         comodel_name="res.currency",
         string="Currency",
         ondelete="cascade",
         domain=[],
         required=True,
-        help='Inbuilt Currency in res.currency model'
+        help='Inbuilt Currency in res.currency model',
+        tracking=True
     )
+    payment_price = fields.Float(string="Payment", tracking=True)
+    booking_hours = fields.Char(string="Booking Hours", tracking=True)

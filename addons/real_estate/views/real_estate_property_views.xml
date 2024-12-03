@@ -8,6 +8,10 @@
         <field name="arch" type="xml">
             <form string="Property Form">
                 <sheet>
+                    <group string="Property Images">
+                        <field name="image1" widget="image" class="oe_avatar" />
+                        <field name="image2" widget="image" class="oe_avatar" />
+                    </group>
                     <group id="form_group1">
                         <field name="name" />
                         <field name="typeOfProperty" />
@@ -19,11 +23,20 @@
                     </group>
 
                     <group>
-                        <field name="amenity" widget="many2many_tags"/>
+                        <!--many2many_tags widget used-->
+                        <field name="amenity" widget="many2many_tags" />
 
+                        <!--many2many_tags widget used-->    
                         <field name="feature" widget="many2many_tags" />
 
+                        <!--many2many_tags widget used-->
                         <field name="connectivity" widget="many2many_tags" />
+
+                        <field name="property_details_id" />
+                        <field name="booking_ids" />
+                        <field name="rent_contract_ids" />
+                        <field name="sale_contract_ids" />
+
                     </group>
 
                 </sheet>
@@ -41,19 +54,27 @@
         <field name="model">real_estate.property</field>
         <field name="arch" type="xml">
             <tree string="Property Tree">
+                <field name="image1" />
+                <field name="image2" />
                 <field name="name" />
                 <field name="typeOfProperty" />
                 <field name="status" />
                 <field name="area" />
                 <!--many2many_tags widget used-->
-                <field name="amenity" widget="many2many_tags"/>
+                <field name="amenity" widget="many2many_tags" />
  
                 <!--many2many_tags widget used-->
                 <field name="feature" widget="many2many_tags" />
 
+                <!--many2many_tags widget used-->
                 <field name="connectivity" widget="many2many_tags" />
 
                 <field name="geo_location" />
+
+                <field name="property_details_id" />
+                <field name="booking_ids" />
+                <field name="rent_contract_ids" />
+                <field name="sale_contract_ids" />
             </tree>
         </field>
     </record>
@@ -68,31 +89,62 @@
                     <div class="oe_kanban_global_click">
                         <div class="oe_kanban_details">
                             <div class="oe_kanban_title">
+                                <strong>Property Name: </strong>
                                 <field name="name" />
                             </div>
                             <div class="oe_kanban_tags">
+                                <strong>Type of Property: </strong>
                                 <field name="typeOfProperty" />
                             </div>
                             <div class="oe_kanban_tags">
+                                <strong>Property Status: </strong>
                                 <field name="status" />
                             </div>
                             <div class="oe_kanban_tags">
+                                <strong>Property Area: </strong>
                                 <field name="area" />
                             </div>
                             <div class="oe_kanban_tags">
+                                <strong>Geo-Location: </strong>
                                 <field name="geo_location" />
                             </div>
                             <!--many2many_tags widget used-->
                             <div class="oe_kanban_tags">
-                                <field name="amenity" widget="many2many_tags"/>
+                                <strong>Property Amenities: </strong>
+                                <field name="amenity" widget="many2many_tags" />
+                            </div>
+                            <!--many2many_tags widget used-->
+                            <div class="oe_kanban_tags">
+                                <strong>Property Features: </strong>
+                                <field name="feature" widget="many2many_tags" />
+                            </div>
+                            <!--many2many_tags widget used-->
+                            <div class="oe_kanban_tags">
+                                <strong>Property Connectivity: </strong>
+                                <field name="connectivity" widget="many2many_tags" />
                             </div>
 
                             <div class="oe_kanban_tags">
-                                <field name="feature" widget="many2many_tags"/>
+                                <strong>Property Details: </strong>
+                                <field name="property_details_id" widget="many2one_tags" />
+                            </div>
+                            
+                            <div class="oe_kanban_tags">
+                                <strong>Property Details: </strong>
+                                <field name="booking_ids"
+                                />
                             </div>
 
                             <div class="oe_kanban_tags">
-                                <field name="connectivity" widget="many2many_tags"/>
+                                <strong>Rental Contracts: </strong>
+                                <field name="rent_contract_ids"
+                                />
+                            </div>
+
+                            <div class="oe_kanban_tags">
+                                <strong>Sale Contracts: </strong>
+                                <field name="sale_contract_ids"
+                                />
                             </div>
                         </div>
                     </div>

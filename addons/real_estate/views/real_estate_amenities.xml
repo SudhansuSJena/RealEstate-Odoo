@@ -7,7 +7,7 @@
     <field name="model">real_estate.amenities</field>
     <field name="arch" type="xml">
         <tree string="Amenities Tree">
-            <field name="amenity_name" />
+            <field name="name" />
             <field name="description" />
         </tree>
     </field>
@@ -25,7 +25,7 @@
                         <div class="oe_kanban_details">
 
                             <div class="oe_kanban_tags">
-                                <field name="amenity_name" />
+                                <field name="name" />
                             </div>
 
                             <div class="oe_kanban_tags">
@@ -48,7 +48,7 @@
         <form string="Amenities Form">
             <sheet>
                 <group id="amenities1">
-                    <field name="amenity_name" />
+                    <field name="name" />
                     <field name="description" />
                 </group>
             </sheet>

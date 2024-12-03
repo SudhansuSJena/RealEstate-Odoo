@@ -7,9 +7,10 @@
     <field name="model">real_estate.customers</field>
     <field name="arch" type="xml">
         <tree string="Customer's Tree view">
-            <field name="customer_name" />
-            <field name="customer_phone_number" />
-            <field name="customer_email" />
+            <field name="image" widget="image" class="oe_avatar" />
+            <field name="name" />
+            <field name="phone_number" />
+            <field name="email" />
             <field name="booking_ids" />
             <field name="rental_contract_ids" />
             <field name="sale_contract_ids" />
@@ -24,26 +25,33 @@
     <field name="model">real_estate.customers</field>
     <field name="arch" type="xml">
         <kanban string="Customer's Kanban View">
+            <field name="image" widget="image" class="oe_avatar" />
             <templates>
             <t t-name="kanban-box">
             <div class="oe_kanban_global_click">
                 <div class="oe_kanban_details">
                     <div class="oe_kanban_tags">
-                        <field name="customer_name" />
+                        <strong>Customer's Name:</strong>
+                        <field name="name" />
                     </div>
                     <div class="oe_kanban_tags">
-                        <field name="customer_phone_number" />
+                        <strong>Customer's Phone-Number:</strong>
+                        <field name="phone_number" />
                     </div>
                     <div class="oe_kanban_tags">
-                        <field name="customer_email" />
+                        <strong>Customer's email:</strong>
+                        <field name="email" />
                     </div>
                     <div class="oe_kanban_tags">
+                        <strong>Your Bookings:</strong>
                         <field name="booking_ids" />
                     </div>
                     <div class="oe_kanban_tags">
+                        <strong>Your Rental Contracts:</strong>
                         <field name="rental_contract_ids" />
                     </div>
                     <div class="oe_kanban_tags">
+                        <string>Sale Contracts</string>
                         <field name="sale_contract_ids" />
                     </div>
                 </div>
@@ -62,13 +70,16 @@
     <field name="arch" type="xml">
         <form string="Customer's Form View">
             <sheet>
-                <group id="customer_detail">
-                    <field name="customer_name" />
-                    <field name="customer_phone_number" />
-                    <field name="customer_email" />
+
+                <field name="image" widget="image" class="oe_avatar" />
+
+                <group id="customer_detail" string="Customer's Details">
+                    <field name="name" />
+                    <field name="phone_number" />
+                    <field name="email" />
                 </group>
 
-                <group id="customer_sales">
+                <group id="customer_sales" string="Customer's Bookings">
                     <field name="booking_ids" />
                     <field name="rental_contract_ids" />
                     <field name="sale_contract_ids" />

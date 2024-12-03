@@ -7,5 +7,5 @@ class RealEstateConnectivity(models.Model):
     _inherit = ["mail.thread"]
 
 
-    connectivity_name = fields.Char(string="Connectivity Name", tracking=True)
+    name = fields.Char(string="Connectivity Name", tracking=True)
     description = fields.Char(string="Description", tracking=True)

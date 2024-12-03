@@ -6,7 +6,7 @@ class RealEstateSaleContracts(models.Model):
     _description = "Sale contracts for Property"
     _inherit = ['mail.thread']
 
-
+    name = fields.Char(string="Sale's Name")
     property_id = fields.Many2one(
         comodel_name = "real_estate.property",
         string="Property",
@@ -32,7 +32,7 @@ class RealEstateSaleContracts(models.Model):
         ('signed', 'Signed'),
         ('completed', 'Completed'),
         ('cancelled', 'Cancelled')
-    ], tracking=True)
+    ], string="Sale's status", tracking=True)
     buyer_id = fields.Many2one(
         comodel_name="real_estate.customers",
         string="Buyer",
@@ -42,4 +42,4 @@ class RealEstateSaleContracts(models.Model):
         help='Customer buying Property',
         tracking=True
     )
-    sale_price = fields.Float(string="Sale Price", tracking=True)
+    sale_price = fields.Float(string="Sale's Price", tracking=True)

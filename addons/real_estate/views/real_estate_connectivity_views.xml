@@ -7,7 +7,7 @@
     <field name="model">real_estate.connectivity</field>
     <field name="arch" type="xml">
         <tree>
-            <field name="connectivity_name" />
+            <field name="name" />
             <field name="description" />
         </tree>
     </field>
@@ -24,10 +24,12 @@
                     <div class="oe_kanban_global_click">
                         <div class="oe_kanban_details">
                             <div class="oe_kanban_tags">
-                                <field name="connectivity_name" />
+                                <strong>Connectivity Name: </strong>
+                                <field name="name" />
                             </div>
 
                             <div class="oe_kanban_tags">
+                                <strong>Description: </strong>
                                 <field name="description" />
                             </div>
                         </div>
@@ -46,7 +48,7 @@
         <form>
             <sheet>
                 <group>
-                    <field name="connectivity_name" />
+                    <field name="name" />
                     <field name="description" />
                 </group>
             </sheet>

@@ -7,7 +7,7 @@
         <field name="model">real_estate.features</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="feature_name" />
+                <field name="name" />
                 <field name="description" />
             </tree>
         </field>
@@ -24,7 +24,7 @@
                         <div class="oe_kanban_global_click">
                             <div class="oe_kanban_details">
                                 <div class="oe_kanban_tags">
-                                    <field name="feature_name" />
+                                    <field name="name" />
                                 </div>
                                 <div class="oe_kanban_tags">
                                     <field name="description" />
@@ -45,7 +45,7 @@
             <form>
                 <sheet>
                     <group>
-                        <field name="feature_name" />
+                        <field name="name" />
                         <field name="description" />
                     </group>
                 </sheet>

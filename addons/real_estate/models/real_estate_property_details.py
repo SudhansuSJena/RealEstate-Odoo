@@ -6,7 +6,6 @@ class RealEstatePropertyDetails(models.Model):
     _description="Details of RealEstate Property"
     _inherit=["mail.thread"]
 
-
     property_id = fields.Many2one(
         comodel_name="real_estate.property",
         string="Property Details",
@@ -16,6 +15,8 @@ class RealEstatePropertyDetails(models.Model):
         tracking=True,
         index=True
     )
+
+    name = fields.Char(string="Detail's Name")
 
     bedroom_area = fields.Float(string="Bedroom area", tracking=True)
     bathroom_area = fields.Float(string="Bathroom area", tracking=True)

@@ -24,37 +24,39 @@ class RealEstateProperty(models.Model):
     ], string="Property Status", tracking=True)
 
     area=fields.Float(string="Property Area", tracking=True)
+
     geo_location=fields.Char(string="Geo-Location", tracking=True)
+
     amenity = fields.Many2many(
-        comodel_name = 'real_estate.amenities',
-        relation = 'property_amenities_rel',
-        column1 = 'property_id',
-        column2 = 'amenities_id',
-        string = 'Property Amenities',
+        comodel_name = "real_estate.amenities",
+        relation = "property_amenities_rel",
+        column1 = "property_id",
+        column2 = "amenities_id",
+        string = "Property Amenities",
         domain = [],
-        help = 'Select Amenities for Property',
-        tracking=True
+        help = "Select Amenities for Property",
+        tracking=True,
     )
 
     feature = fields.Many2many(
-        comodel_name = 'real_estate.features',
-        relation = 'property_features_rel',
-        column1 = 'property_id',
-        column2 = 'features_id',
-        string = 'Property Features',
+        comodel_name = "real_estate.features",
+        relation = "property_features_rel",
+        column1 = "property_id",
+        column2 = "features_id",
+        string = "Property Features",
         domain = [],
-        help = 'Select Features for Property',
+        help = "Select Features for Property",
         tracking=True
     )
 
     connectivity = fields.Many2many(
-        comodel_name = 'real_estate.connectivity',
-        relation = 'property_connectivity_rel',
-        column1 = 'property_id',
-        column2 = 'connectivity_id',
-        string = 'Property Connectivity',
+        comodel_name = "real_estate.connectivity",
+        relation = "property_connectivity_rel",
+        column1 = "property_id",
+        column2 = "connectivity_id",
+        string = "Property Connectivity",
         domain = [],
-        help = 'See the connectivities from the property.',
+        help = "See the connectivities from the property.",
         tracking=True
     )
 
@@ -62,7 +64,7 @@ class RealEstateProperty(models.Model):
         comodel_name = "real_estate.property_details",
         string="Property Details",
         domain=[],
-        help='Select your property details',
+        help="Select your property details",
         tracking=True
     )
 
@@ -73,7 +75,7 @@ class RealEstateProperty(models.Model):
         domain=[],
         context={},
         readonly=False,
-        help='Booking IDs of Property'
+        help="Booking IDs of Property"
     )
 
     rent_contract_ids = fields.One2many(
@@ -82,7 +84,6 @@ class RealEstateProperty(models.Model):
         string="Rental Contracts",
         domain=[],
         context={},
-        required=True,
         help="Property's Rental Contracts"
     )
 
@@ -92,9 +93,11 @@ class RealEstateProperty(models.Model):
         string="Sale Contracts",
         domain=[],
         context={},
-        required=True,
         help="Property's Sale Contracts"
     )
+
+    image1 = fields.Image()
+    image2 = fields.Image()
 
 
     

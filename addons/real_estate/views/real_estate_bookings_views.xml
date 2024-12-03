@@ -13,6 +13,8 @@
             <field name="booking_date" />
             <field name="booking_status" />
             <field name="currency_id" />
+            <field name="payment_price" />
+            <field name="booking_hours" />
         </tree>
     </field>
 </record>
@@ -29,19 +31,38 @@
                     <div class="oe_kanban_global_click">
                         <div class="oe_kanban_details">
                             <div class="oe_kanban_tags">
+                            <!-- Many2one -->
+                                <strong>Customer: </strong>
                                 <field name="customer_id" />
                             </div>
+
                             <div class="oe_kanban_tags">
+                                <!-- Many2one -->
+                                <strong>Select Property: </strong>
                                 <field name="property_id" />
                             </div>
+
                             <div class="oe_kanban_tags">
+                                <strong>Date: </strong>
                                 <field name="booking_date" />
                             </div>
                             <div class="oe_kanban_tags">
+                                <strong>Booking status: </strong>
                                 <field name="booking_status" />
                             </div>
                             <div class="oe_kanban_tags">
+                                <strong>Currency: </strong>
                                 <field name="currency_id" />
+                            </div>
+
+                            <div class="oe_kanban_tags">
+                                <strong>Payment: </strong>
+                                <field name="payment_price" />
+                            </div>
+
+                            <div class="oe_kanban_tags">
+                                <strong>Booking Hours: </strong>
+                                <field name="booking_hours" />
                             </div>
                         </div>
                     </div>
@@ -61,11 +82,19 @@
             <sheet>
 
                 <group>
-                    <field name="customer_id" />
-                    <field name="property_id" />
+                    <!-- Many2one tags -->
+                    <field name="customer_id" widget="many2one_tags" />
+
+                    <!-- Many2one tags -->
+                    <field name="property_id" widget="many2one_tags" />
+
                     <field name="booking_date" />
                     <field name="booking_status" />
+
+                    <!-- Many2one -->
                     <field name="currency_id" />
+                    <field name="payment_price" />
+                    <field name="booking_hours" />
                 </group>
             </sheet>
             <div class="oe_chatter">

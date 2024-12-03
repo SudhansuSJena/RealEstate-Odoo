@@ -8,6 +8,7 @@
     <field name="arch" type="xml">
         <tree string="Property Details Tree">
             <field name="property_id" />
+            <field name="name" />
             <field name="bedroom_area" />
             <field name="bathroom_area" />
             <field name="kitchen_area" />
@@ -36,50 +37,67 @@
                     <div class="oe_kanban_details">
 
                         <div class="oe_kanban_tags">
+                            <strong>Property Details: </strong>
                             <field name="property_id" />
                         </div>
 
                         <div class="oe_kanban_tags">
+                            <strong>Detail's Name</strong>
+                            <field name="name" />
+                        </div>
+
+                        <div class="oe_kanban_tags">
+                            <strong>Bedroom area: </strong>
                             <field name="bedroom_area" />
                         </div>
 
                         <div class="oe_kanban_tags">
+                            <strong>Bathroom area: </strong>
                             <field name="bathroom_area" />
                         </div>
 
                         <div class="oe_kanban_tags">
+                            <strong>Kitchen area: </strong>
                             <field name="kitchen_area" />
                         </div>
 
                         <div class="oe_kanban_tags">
+                            <strong>Hall area: </strong>
                             <field name="hall_area" />
                         </div>
 
                         <div class="oe_kanban_tags">
+                            <strong>Parking area: </strong>
                             <field name="parking_area" />
                         </div>
 
                         <div class="oe_kanban_tags">
+                            <strong>Backyard area: </strong>
                             <field name="backyard_area" />
                         </div>
 
                         <div class="oe_kanban_tags">
+                            <strong>Total bedrooms: </strong>
                             <field name="total_bedrooms" />
                         </div>
 
                         <div class="oe_kanban_tags">
+                            <strong>Total bathrooms: </strong>
                             <field name="total_bathrooms" />
                         </div>
 
                         <div class="oe_kanban_tags">
+                            <strong>Total floors: </strong>
                             <field name="total_floors" />
                         </div>
 
                         <div class="oe_kanban_tags">
+                            <strong>Total halls: </strong>
                             <field name="total_halls" />
                         </div>
 
                         <div class="oe_kanban_tags">
+                            <strong>Total parking: </strong>
                             <field name="total_parkings" />
                         </div>
 
@@ -102,6 +120,7 @@
             <sheet>
                 <group id="property_details_group1">
                     <field name="property_id" />
+                    <field name="name" />
                 </group>
                 
                 <group id="property_details_group2" string="Property details amenity" optional="hidden">
