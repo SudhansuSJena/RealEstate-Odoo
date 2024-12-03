@@ -24,9 +24,11 @@
                         <div class="oe_kanban_global_click">
                             <div class="oe_kanban_details">
                                 <div class="oe_kanban_tags">
+                                    <strong>Feature Name: </strong>
                                     <field name="name" />
                                 </div>
                                 <div class="oe_kanban_tags">
+                                    <strong>Description: </strong>
                                     <field name="description" />
                                 </div>
                             </div>

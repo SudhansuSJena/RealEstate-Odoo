@@ -31,27 +31,27 @@
             <div class="oe_kanban_global_click">
                 <div class="oe_kanban_details">
                     <div class="oe_kanban_tags">
-                        <strong>Customer's Name:</strong>
+                        <strong>Customer's Name: </strong>
                         <field name="name" />
                     </div>
                     <div class="oe_kanban_tags">
-                        <strong>Customer's Phone-Number:</strong>
+                        <strong>Customer's Phone-Number: </strong>
                         <field name="phone_number" />
                     </div>
                     <div class="oe_kanban_tags">
-                        <strong>Customer's email:</strong>
+                        <strong>Customer's email: </strong>
                         <field name="email" />
                     </div>
                     <div class="oe_kanban_tags">
-                        <strong>Your Bookings:</strong>
+                        <strong>Your Bookings: </strong>
                         <field name="booking_ids" />
                     </div>
                     <div class="oe_kanban_tags">
-                        <strong>Your Rental Contracts:</strong>
+                        <strong>Your Rental Contracts: </strong>
                         <field name="rental_contract_ids" />
                     </div>
                     <div class="oe_kanban_tags">
-                        <string>Sale Contracts</string>
+                        <string>Sale Contracts: </string>
                         <field name="sale_contract_ids" />
                     </div>
                 </div>

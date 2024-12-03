@@ -30,38 +30,38 @@
                     <div class="oe_kanban_details">
 
                         <div class="oe_kanban_tags">
-                            <strong>Buyer</strong>
+                            <strong>Buyer: </strong>
                             <field name="buyer_id" />
                         </div>
 
                         <div class="oe_kanban_tags">
-                            <strong>Property</strong>
+                            <strong>Property: </strong>
                             <field name="property_id" />
                         </div>
 
 
                         <div class="oe_kanban_tags">
-                            <strong>Sale's Name</strong>
+                            <strong>Sale's Name: </strong>
                             <field name="name" />
                         </div>
 
                         <div class="oe_kanban_tags">
-                            <strong>Currency</strong>
+                            <strong>Currency: </strong>
                             <field name="currency_id" />
                         </div>
 
                         <div class="oe_kanban_tags">
-                            <strong>Sale's Price</strong>
+                            <strong>Sale's Price: </strong>
                             <field name="sale_price" />
                         </div>
 
                         <div class="oe_kanban_tags">
-                            <strong>Sale's Date</strong>
+                            <strong>Sale's Date: </strong>
                             <field name="sale_date" />
                         </div>
 
                         <div class="oe_kanban_tags">
-                            <strong>Sale's status</strong>
+                            <strong>Sale's status: </strong>
                             <field name="sale_status" />
                         </div>
 

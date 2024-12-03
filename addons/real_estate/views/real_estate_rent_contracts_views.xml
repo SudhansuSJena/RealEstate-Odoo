@@ -32,11 +32,11 @@
                     <div class="oe_kanban_global_click">
                         <div class="oe_kanban_details">
                             <div class="oe_kanban_tags">
-                                <strong>Property</strong>
+                                <strong>Property: </strong>
                                 <field name="property_id" />
                             </div>
                             <div class="oe_kanban_tags">
-                                <strong>Tenant of the Property</strong>
+                                <strong>Tenant of the Property: </strong>
                                 <field name="tenant_id" />
                             </div>
                             <div class="oe_kanban_tags">
@@ -48,22 +48,22 @@
                                 <field name="rent_status" />
                             </div>
                             <div class="oe_kanban_tags">
-                                <strong>Currency</strong>
+                                <strong>Currency: </strong>
                                 <field name="currency_id" />
                             </div>
                             <div class="oe_kanban_tags">
                                 <field name="rent_amount" />
                             </div>
                             <div class="oe_kanban_tags">
-                                <strong>Start Date</strong>
+                                <strong>Start Date: </strong>
                                 <field name="start_date" />
                             </div>
                             <div class="oe_kanban_tags">
-                                <strong>End Date</strong>
+                                <strong>End Date: </strong>
                                 <field name="end_date" />
                             </div>
                             <div class="oe_kanban_tags">
-                                <strong>Description</strong>
+                                <strong>Description: </strong>
                                 <field name="description" />
                             </div>
                             
